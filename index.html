@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio de Henrique: criação e design de sites com foco em clareza, coerência visual e atenção aos detalhes.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#f4f6f8">
+  <title>Henrique | Criação e design de sites</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Henrique | Criação e design de sites">
+  <meta property="og:description" content="Estrutura clara, coerência visual e atenção aos detalhes na criação de sites.">
+  <meta property="og:locale" content="pt_BR">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Henrique — criação e design de sites",
+    "description": "Portfólio de Henrique, dedicado à criação de sites com clareza, coerência visual e atenção aos detalhes.",
+    "inLanguage": "pt-BR",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Henrique"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --ink: #27313b;
+      --muted: #627181;
+      --paper: #f4f6f8;
+      --white: #ffffff;
+      --line: #dce2e8;
+      --blue: #0b5d8c;
+      --blue-bright: #1688bd;
+      --navy: #173c59;
+      --gray: #89939f;
+      --pale: #e8f1f7;
+      --shadow: 0 22px 58px rgba(29,61,86,.12);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.65; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--blue-bright); outline-offset: 4px; border-radius: 6px; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 200; background: var(--white); padding: 10px 14px; }
+    .skip-link:focus { left: 12px; }
+    header { position: sticky; top: 0; z-index: 80; border-bottom: 1px solid rgba(39,49,59,.12); background: rgba(244,246,248,.95); backdrop-filter: blur(14px); }
+    .topbar { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-weight: 800; letter-spacing: -.035em; }
+    .brand-mark { width: 43px; height: 36px; display: grid; place-items: center; background: transparent; color: var(--blue-bright); }
+    .brand-mark svg { width: 42px; height: 34px; }
+    .brand-name { display: grid; line-height: 1.2; }
+    .brand-name strong { font-size: 15px; }
+    .brand-name small { margin-top: 3px; color: var(--muted); font-size: 10px; font-weight: 650; letter-spacing: .06em; }
+    .nav { display: flex; align-items: center; gap: 20px; }
+    .nav a { color: #586674; text-decoration: none; font-size: 13px; font-weight: 700; }
+    .nav a:hover { color: var(--blue); text-decoration: underline; text-underline-offset: 4px; }
+    .nav .nav-contact { padding: 9px 14px; border-radius: 999px; background: var(--blue); color: var(--white); }
+    .nav .nav-contact:hover { background: #08486e; color: var(--white); text-decoration: none; }
+    .scroll-progress { position: fixed; z-index: 120; top: 0; left: 0; width: 100%; height: 3px; background: rgba(11,93,140,.12); pointer-events: none; }
+    .scroll-progress span { display: block; width: 0; height: 100%; background: linear-gradient(90deg,var(--blue-bright),var(--blue)); }
+    section[id] { scroll-margin-top: 132px; }
+    .hero { position: relative; overflow: hidden; padding: 72px 0 78px; background: radial-gradient(circle at 7% 16%, rgba(22,136,189,.13), transparent 30%), linear-gradient(135deg,#f4f6f8 8%,#edf3f7 100%); }
+    .hero::after { content: ""; position: absolute; width: 440px; height: 440px; right: -225px; top: -250px; border: 1px solid rgba(11,93,140,.12); border-radius: 50%; box-shadow: 0 0 0 35px rgba(11,93,140,.025), 0 0 0 70px rgba(11,93,140,.02); pointer-events: none; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.06fr .94fr; gap: 58px; align-items: center; }
+    .eyebrow, .section-label { display: inline-flex; align-items: center; gap: 9px; color: var(--blue); font-size: 11px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--blue-bright); }
+    h1 { max-width: 670px; margin: 18px 0 19px; font-size: clamp(42px,5.2vw,68px); line-height: 1.02; letter-spacing: -.067em; font-weight: 820; }
+    h1 em { color: var(--blue-bright); font-style: normal; }
+    .hero-copy { max-width: 585px; margin: 0; color: var(--muted); font-size: 18px; line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; margin-top: 29px; }
+    .button { min-height: 49px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 20px; border: 1px solid transparent; border-radius: 999px; background: var(--blue); color: var(--white); text-decoration: none; font-size: 13px; font-weight: 800; box-shadow: 0 9px 20px rgba(11,93,140,.2); transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+    .button:hover { transform: translateY(-2px); background: #08486e; box-shadow: 0 13px 26px rgba(11,93,140,.25); }
+    .button .arrow { font-size: 16px; line-height: 1; }
+    .text-button { color: var(--blue); font-size: 13px; font-weight: 800; text-underline-offset: 4px; }
+    .showcase { position: relative; min-height: 390px; padding: 17px; overflow: hidden; border: 1px solid rgba(255,255,255,.2); border-radius: 29px; background: linear-gradient(145deg,#0b5d8c,#173c59 72%,#52738a 140%); box-shadow: var(--shadow); }
+    .showcase::before, .showcase::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; pointer-events: none; }
+    .showcase::before { width: 360px; height: 360px; right: -180px; top: -202px; }
+    .showcase::after { width: 245px; height: 245px; right: -120px; top: -145px; }
+    .window { position: relative; z-index: 1; min-height: 354px; overflow: hidden; border: 1px solid rgba(255,255,255,.3); border-radius: 19px; background: #f7f9fb; }
+    .window-bar { min-height: 41px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 14px; border-bottom: 1px solid #e1e7ed; background: #fff; }
+    .window-dots { display: flex; gap: 5px; }
+    .window-dots i { width: 7px; height: 7px; border-radius: 50%; background: #b5c0c9; }
+    .window-dots i:first-child { background: var(--blue-bright); }
+    .window-tag { color: #7b8793; font-size: 9px; font-weight: 800; letter-spacing: .12em; }
+    .mock-page { position: relative; min-height: 313px; padding: 27px 25px; background: radial-gradient(circle at 90% 10%,rgba(22,136,189,.13),transparent 35%),linear-gradient(145deg,#fff,#eef3f7); }
+    .mock-kicker { color: var(--blue); font-size: 9px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    .mock-page h2 { max-width: 340px; margin: 13px 0 10px; color: var(--ink); font-size: clamp(25px,3vw,36px); line-height: 1.08; letter-spacing: -.06em; }
+    .mock-page h2 em { color: var(--blue-bright); font-style: normal; }
+    .mock-page p { max-width: 330px; margin: 0; color: #657482; font-size: 12px; line-height: 1.6; }
+    .mock-lines { display: flex; gap: 7px; margin-top: 20px; }
+    .mock-lines span { height: 6px; border-radius: 99px; background: #d7e1e9; }
+    .mock-lines span:first-child { width: 65px; background: var(--blue); }
+    .mock-lines span:nth-child(2) { width: 43px; }
+    .mock-card { position: absolute; right: 21px; bottom: 22px; width: 105px; height: 82px; border-radius: 18px; background: linear-gradient(135deg,#1688bd,#0b5d8c); box-shadow: 0 12px 22px rgba(11,93,140,.2); transform: rotate(7deg); }
+    .mock-card::before { content: ""; position: absolute; width: 40px; height: 40px; right: 12px; top: 12px; border: 1px solid rgba(255,255,255,.48); border-radius: 50%; }
+    .mock-card::after { content: ""; position: absolute; width: 26px; height: 26px; left: 15px; bottom: 13px; border-radius: 8px; background: rgba(255,255,255,.19); }
+    .showcase-caption { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 12px; margin: 13px 3px 0; color: #d6e4ed; font-size: 9px; font-weight: 750; letter-spacing: .11em; text-transform: uppercase; }
+    .section { padding: 82px 0; }
+    .section.white { background: var(--white); }
+    .section-head { max-width: 690px; margin-bottom: 32px; }
+    h2.section-title { margin: 10px 0 12px; font-size: clamp(31px,3.5vw,46px); line-height: 1.1; letter-spacing: -.055em; }
+    .section-intro { max-width: 630px; margin: 0; color: var(--muted); font-size: 15px; }
+    .focus-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; }
+    .focus-card { position: relative; min-height: 225px; padding: 25px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(155deg,#fff,#f7fafc); box-shadow: 0 9px 24px rgba(29,61,86,.045); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .focus-card:hover { transform: translateY(-4px); border-color: #b9d3e2; box-shadow: var(--shadow); }
+    .focus-number { display: inline-grid; width: 38px; height: 38px; place-items: center; border-radius: 12px; background: var(--pale); color: var(--blue); font-size: 12px; font-weight: 850; }
+    .focus-card h3 { margin: 22px 0 8px; font-size: 19px; letter-spacing: -.03em; }
+    .focus-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .process { position: relative; overflow: hidden; background: linear-gradient(130deg,#0b5d8c,#173c59 75%); color: var(--white); }
+    .process::after { content: ""; position: absolute; width: 520px; height: 520px; right: -250px; bottom: -350px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 35px rgba(255,255,255,.03),0 0 0 70px rgba(255,255,255,.025); }
+    .process .wrap { position: relative; z-index: 1; }
+    .process .section-label { color: #c7e5f3; }
+    .process .section-intro { color: #d4e2ea; }
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; margin-top: 39px; }
+    .step { position: relative; padding: 0 27px 0 0; }
+    .step:not(:last-child)::after { content: ""; position: absolute; top: 17px; left: 49px; right: 24px; height: 1px; background: rgba(255,255,255,.23); }
+    .step-number { position: relative; z-index: 1; display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(255,255,255,.34); border-radius: 50%; background: #0b5d8c; color: white; font-size: 12px; font-weight: 850; }
+    .step h3 { margin: 19px 0 7px; font-size: 18px; letter-spacing: -.02em; }
+    .step p { max-width: 285px; margin: 0; color: #d4e2ea; font-size: 13px; line-height: 1.65; }
+    .process-brief { margin-top: 40px; padding: 23px 25px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; background: rgba(255,255,255,.055); }
+    .process-brief-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; margin-bottom: 17px; }
+    .process-brief-heading .section-label { margin: 0; color: #c7e5f3; }
+    .process-brief-heading h3 { margin: 0; color: var(--white); font-size: 19px; letter-spacing: -.025em; }
+    .process-brief-intro { margin: 0 0 15px; color: #d4e2ea; font-size: 13px; }
+    .brief-points { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .brief-point { padding: 14px 16px; border-left: 2px solid var(--blue-bright); border-radius: 0 12px 12px 0; background: rgba(255,255,255,.055); }
+    .brief-point strong { display: block; margin-bottom: 4px; color: var(--white); font-size: 13px; }
+    .brief-point p { margin: 0; color: #d4e2ea; font-size: 12px; line-height: 1.55; }
+    .brief-note { margin: 15px 0 0; color: #b9d1df; font-size: 11px; line-height: 1.55; }
+    .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 60px; align-items: center; }
+    .about-mark { display: grid; min-height: 270px; place-items: center; border: 1px solid #d4e1e9; border-radius: 28px; background: radial-gradient(circle at center,rgba(22,136,189,.17),transparent 55%),linear-gradient(145deg,#eaf1f6,#f9fbfc); }
+    .about-mark svg { width: min(50%,190px); height: auto; filter: drop-shadow(0 14px 18px rgba(11,93,140,.12)); }
+    .about-copy p { margin: 0 0 15px; color: var(--muted); font-size: 16px; }
+    .about-copy .lead { color: var(--ink); font-size: 21px; font-weight: 760; line-height: 1.45; letter-spacing: -.035em; }
+    .cta { padding: 0 0 82px; background: var(--white); }
+    .cta-panel { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 34px 38px; border: 1px solid #d6e2ea; border-radius: 25px; background: linear-gradient(120deg,#eaf2f7,#f7f9fb 68%,#e7eff4); }
+    .cta-panel h2 { margin: 0 0 7px; font-size: clamp(24px,3vw,34px); line-height: 1.15; letter-spacing: -.05em; }
+    .cta-panel p { margin: 0; color: var(--muted); font-size: 14px; }
+    .cta-panel .button { flex: none; }
+    .contact-section { padding: 77px 0; background: linear-gradient(135deg,#eaf2f7,#f4f6f8 58%,#e6eef4); }
+    .contact-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 48px; align-items: center; }
+    .contact-intro .section-intro { margin-bottom: 25px; }
+    .contact-number { display: grid; gap: 4px; padding-left: 14px; border-left: 3px solid var(--blue-bright); }
+    .contact-number span { color: #687786; font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+    .contact-number a { width: fit-content; color: var(--blue); font-size: 17px; font-weight: 850; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .contact-card { padding: 28px; border: 1px solid #d5e0e8; border-radius: 23px; background: rgba(255,255,255,.96); box-shadow: 0 18px 44px rgba(29,61,86,.1); }
+    .contact-form { display: grid; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { display: grid; gap: 6px; }
+    .field label { color: var(--ink); font-size: 12px; font-weight: 800; }
+    .field input, .field textarea { width: 100%; min-height: 46px; padding: 11px 13px; border: 1px solid #ccd6df; border-radius: 12px; background: #fbfcfd; color: var(--ink); font: inherit; font-size: 14px; }
+    .field textarea { min-height: 125px; resize: vertical; }
+    .field input:focus, .field textarea:focus { outline: 3px solid rgba(22,136,189,.2); border-color: var(--blue-bright); }
+    .contact-disclosure { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .contact-form .button { width: 100%; cursor: pointer; font: inherit; font-size: 13px; }
+    @media (max-width: 700px) { .contact-grid { grid-template-columns: 1fr; gap: 28px; } }
+    @media (max-width: 560px) { .contact-section { padding: 54px 0; } .contact-card { padding: 21px; } .form-row { grid-template-columns: 1fr; } }
+    footer { padding: 23px 0 31px; border-top: 1px solid var(--line); background: var(--paper); color: #76828d; font-size: 11px; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    footer p { margin: 0; }
+    .footer-name { color: #536272; font-weight: 750; }
+    .whatsapp-float { position: fixed; z-index: 110; top: 50%; right: 20px; display: grid; width: 58px; height: 58px; place-items: center; transform: translateY(-50%); border: 1px solid rgba(255,255,255,.45); border-radius: 50%; background: #25D366; color: white; box-shadow: 0 12px 28px rgba(16,54,79,.28); transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .whatsapp-float:hover { transform: translateY(calc(-50% - 3px)); background: #1EBE5D; box-shadow: 0 16px 34px rgba(16,54,79,.36); }
+    .whatsapp-float svg { width: 26px; height: 26px; }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .showcase { min-height: 360px; padding: 13px; }
+      .window { min-height: 332px; }
+      .mock-page { min-height: 291px; padding: 23px 20px; }
+      .about-grid { gap: 34px; }
+      .focus-card { padding: 21px; }
+    }
+    @media (max-width: 700px) {
+      .hero { padding: 48px 0 58px; }
+      .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-copy { font-size: 16px; }
+      .showcase { max-width: 520px; min-height: 355px; }
+      .window { min-height: 327px; }
+      .mock-page { min-height: 286px; }
+      .section { padding: 61px 0; }
+      .focus-grid { grid-template-columns: 1fr; }
+      .focus-card { min-height: auto; }
+      .steps { grid-template-columns: 1fr; gap: 25px; margin-top: 29px; }
+      .step { display: grid; grid-template-columns: 40px 1fr; column-gap: 12px; padding: 0; }
+      .step:not(:last-child)::after { top: 40px; bottom: -21px; left: 17px; right: auto; width: 1px; height: auto; }
+      .step h3 { margin: 0 0 4px; }
+      .step p { grid-column: 2; }
+      .brief-points { grid-template-columns: 1fr; }
+      .about-mark { min-height: 210px; }
+      .cta { padding-bottom: 61px; }
+      .cta-panel { align-items: flex-start; flex-direction: column; padding: 27px; }
+      .whatsapp-float { top: auto; right: 16px; bottom: 16px; transform: none; }
+      .whatsapp-float:hover { transform: translateY(-3px); }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 30px,1120px); }
+      .topbar { min-height: auto; display: grid; grid-template-columns: 1fr; gap: 8px; padding: 9px 0 10px; }
+      .brand { gap: 9px; }
+      .brand-mark { width: 32px; height: 30px; }
+      .brand-mark svg { width: 32px; height: 28px; }
+      .brand-name strong { font-size: 12px; }
+      .brand-name small { font-size: 9px; }
+      .nav { width: 100%; justify-content: space-between; gap: 8px; overflow-x: auto; padding: 2px 0 3px; scrollbar-width: none; }
+      .nav::-webkit-scrollbar { display: none; }
+      .nav a { font-size: 11px; white-space: nowrap; }
+      .nav .nav-contact { padding: 5px 9px; }
+      .hero { padding: 39px 0 50px; }
+      h1 { font-size: clamp(39px,11.7vw,54px); }
+      .hero-actions { align-items: flex-start; flex-direction: column; }
+      .showcase { min-height: 325px; padding: 11px; border-radius: 23px; }
+      .window { min-height: 301px; }
+      .mock-page { min-height: 260px; padding: 22px 17px; }
+      .mock-page h2 { font-size: 29px; }
+      .mock-card { width: 77px; height: 64px; right: 15px; bottom: 16px; }
+      .showcase-caption { font-size: 8px; }
+      .section { padding: 53px 0; }
+      .about-mark { min-height: 180px; }
+      .cta { padding-bottom: 53px; }
+      .footer-row { align-items: flex-start; flex-direction: column; gap: 4px; }
+      .whatsapp-float { width: 54px; height: 54px; right: 13px; bottom: 13px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <header id="topo">
+    <div class="wrap topbar">
+      <a class="brand" href="#topo" aria-label="Criação de sites, início">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 34" fill="none"><path d="M5 29h32" stroke="#89939f" stroke-width="2" stroke-linecap="round"/><path d="M8 26V17h7v9H8Z" fill="#1688bd"/><path d="M18 26V11h7v15h-7Z" fill="#89939f"/><path d="M28 26V5h7v21h-7Z" fill="#0b5d8c"/><path d="m8 12 6-4" stroke="#0b5d8c" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="brand-name"><strong>Criação de sites</strong><small>CLAREZA VISUAL</small></span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#topo">Início</a>
+        <a href="#o-que-faco">Abordagem</a>
+        <a href="#processo">Processo</a>
+        <a href="#sobre">Sobre</a>
+        <a class="nav-contact" href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Criação e design de sites · clareza em cada escolha</span>
+          <h1 id="titulo-principal">Sua ideia merece um site à <em>altura.</em></h1>
+          <p class="hero-copy">A criação de sites combina estrutura clara, apresentação visual coerente e atenção aos detalhes. Cada escolha deve valorizar a mensagem e apresentar sua proposta com consistência.</p>
+          <div class="hero-actions">
+            <a class="button" href="#o-que-faco">Conheça a abordagem <span class="arrow" aria-hidden="true">↓</span></a>
+            <a class="text-button" href="#contato">Converse sobre seu projeto <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <aside class="showcase" aria-label="Demonstração conceitual de uma página com apresentação visual organizada">
+          <div class="window">
+            <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="window-tag">CONCEITO VISUAL · ILUSTRATIVO</span></div>
+            <div class="mock-page">
+              <span class="mock-kicker">UMA PROPOSTA, COM CLAREZA</span>
+              <h2>Uma presença digital começa com uma <em>boa apresentação.</em></h2>
+              <p>Estrutura, hierarquia e coerência visual ajudam a organizar a leitura da página.</p>
+              <div class="mock-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="mock-card" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="showcase-caption"><span>Composição visual</span><span>Conceito ilustrativo</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section white" id="o-que-faco" aria-labelledby="foco-titulo">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-label">Princípios de criação</span>
+          <h2 class="section-title" id="foco-titulo">Clareza, coerência e cuidado em cada detalhe.</h2>
+          <p class="section-intro">Um site bem apresentado organiza a informação, orienta a leitura e mantém a forma alinhada à mensagem.</p>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-card"><span class="focus-number">01</span><h3>A primeira impressão começa antes da leitura.</h3><p>Cores, tipografia e composição formam o primeiro contato visual e devem estar alinhadas à proposta.</p></article>
+          <article class="focus-card"><span class="focus-number">02</span><h3>Clareza orienta a leitura.</h3><p>Uma hierarquia bem definida e informações organizadas tornam a mensagem mais direta e fácil de acompanhar.</p></article>
+          <article class="focus-card"><span class="focus-number">03</span><h3>Consistência reforça o conjunto.</h3><p>Espaçamento, alinhamento e equilíbrio visual ajudam a manter a apresentação coesa do início ao fim.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="processo" aria-labelledby="processo-titulo">
+      <div class="wrap">
+        <span class="section-label">Etapas da abordagem</span>
+        <h2 class="section-title" id="processo-titulo">Da proposta à página: cada etapa tem um propósito.</h2>
+        <p class="section-intro">A abordagem começa pela compreensão da mensagem, segue pela definição visual e inclui a revisão da composição.</p>
+        <div class="steps">
+          <article class="step"><span class="step-number">1</span><div><h3>Compreender o objetivo</h3><p>Definir a mensagem principal e o que a página precisa apresentar.</p></div></article>
+          <article class="step"><span class="step-number">2</span><div><h3>Definir a direção visual</h3><p>Escolher cores, tipografia e elementos visuais coerentes com o conteúdo.</p></div></article>
+          <article class="step"><span class="step-number">3</span><div><h3>Revisar a composição</h3><p>Conferir a hierarquia, o espaçamento e a consistência visual do conjunto.</p></div></article>
+        </div>
+        <aside class="process-brief" aria-labelledby="brief-title">
+          <div class="process-brief-heading"><span class="section-label">Antes de iniciar</span><h3 id="brief-title">Uma proposta clara começa com três pontos.</h3></div>
+          <p class="process-brief-intro">Uma ideia inicial já ajuda a começar; não é necessário ter todos os detalhes definidos.</p>
+          <div class="brief-points">
+            <div class="brief-point"><strong>Objetivo</strong><p>O que o site precisa comunicar ou apresentar?</p></div>
+            <div class="brief-point"><strong>Conteúdo</strong><p>Quais informações devem estar na página?</p></div>
+            <div class="brief-point"><strong>Direção visual</strong><p>Quais cores ou referências ajudam a explicar a proposta?</p></div>
+          </div>
+          <p class="brief-note">A demonstração visual no topo é conceitual e não representa um projeto de cliente.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section white" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="wrap about-grid">
+        <div class="about-mark" aria-hidden="true"><svg viewBox="0 0 42 34" fill="none"><path d="M5 29h32" stroke="#89939f" stroke-width="2" stroke-linecap="round"/><path d="M8 26V17h7v9H8Z" fill="#1688bd"/><path d="M18 26V11h7v15h-7Z" fill="#89939f"/><path d="M28 26V5h7v21h-7Z" fill="#0b5d8c"/><path d="m8 12 6-4" stroke="#0b5d8c" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="about-copy">
+          <span class="section-label">Sobre a abordagem</span>
+          <h2 class="section-title" id="sobre-titulo">Forma e conteúdo devem trabalhar em conjunto.</h2>
+          <p class="lead">Na criação e no design de sites, a apresentação visual deve reforçar a mensagem, não competir com ela.</p>
+          <p>Cada escolha — da hierarquia à composição — busca tornar a proposta mais clara e coerente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato" aria-labelledby="contato-titulo">
+      <div class="wrap contact-grid">
+        <div class="contact-intro">
+          <span class="section-label">Vamos conversar</span>
+          <h2 class="section-title" id="contato-titulo">Conte-me sobre a sua proposta.</h2>
+          <p class="section-intro">Compartilhe o objetivo do site e as informações que deseja apresentar. A conversa começa pela compreensão da sua ideia.</p>
+          <div class="contact-number"><span>Contato pelo WhatsApp</span><a href="https://wa.me/5548988617482" target="_blank" rel="noopener noreferrer">+55 (48) 98861-7482</a></div>
+        </div>
+        <div class="contact-card">
+          <form class="contact-form" id="whatsapp-form">
+            <div class="form-row">
+              <div class="field"><label for="visitor-name">Seu nome (obrigatório)</label><input id="visitor-name" name="name" type="text" autocomplete="name" maxlength="100" required></div>
+              <div class="field"><label for="visitor-contact">E-mail (opcional)</label><input id="visitor-contact" name="contact" type="email" autocomplete="email" maxlength="120" placeholder="Ex.: nome@email.com"></div>
+            </div>
+            <div class="field"><label for="visitor-project">Objetivo e conteúdo do site (obrigatório)</label><textarea id="visitor-project" name="project" rows="5" maxlength="1500" required placeholder="Descreva o objetivo da página e as informações que deseja apresentar."></textarea></div>
+            <p class="contact-disclosure" id="form-explanation">Ao continuar, os dados informados serão preparados em uma mensagem do WhatsApp para sua revisão. O envio só acontece quando você confirmar pelo WhatsApp.</p>
+            <button class="button" type="submit">Preparar mensagem no WhatsApp <span class="arrow" aria-hidden="true">↗</span></button>
+          </form>
+          <noscript><p class="contact-disclosure">Para iniciar sem JavaScript, utilize o link direto do WhatsApp nesta seção.</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+  <a class="whatsapp-float" href="https://wa.me/5548988617482?text=Ol%C3%A1%2C%20Henrique.%20Gostaria%20de%20conversar%20sobre%20a%20cria%C3%A7%C3%A3o%20de%20um%20site." target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa com Henrique pelo WhatsApp. Mensagem pré-preenchida." title="WhatsApp de Henrique">
+    <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 224.1 32c-120 0-217.7 97.6-217.7 217.7 0 38.3 10 75.7 29 108.7L4.5 480l124.8-32.7c31.8 17.4 67.6 26.5 104.6 26.5h.1c120 0 217.7-97.6 217.7-217.7 0-58.1-22.6-112.8-70.8-159m-156.8 334.1c-32.7 0-64.7-8.8-92.6-25.5l-6.6-3.9-68.8 18 18.4-67.1-4.3-4.2a179.5 179.5 0 0 1-27.6-95.8c0-99.1 80.7-179.8 180-179.8 48 0 93.1 18.7 126.9 52.5s52.5 78.9 52.4 126.9c0 99.1-80.7 179.9-179.7 179.9m99-134.7c-5.4-2.7-31.9-15.7-36.8-17.4-4.9-1.8-8.5-2.7-12 2.7-3.6 5.4-13.8 17.4-16.9 21-3.1 3.6-6.3 4-11.6 1.3-31.7-15.8-52.5-28.2-73.4-63.9-5.5-9.5 5.5-8.8 15.8-29.3 1.8-3.6.9-6.7-.4-9.4-1.3-2.7-12-28.8-16.4-39.4-4.3-10.4-8.7-9-12-9.2-3.1-.2-6.7-.2-10.3-.2s-9.4 1.3-14.3 6.7-18.7 18.3-18.7 44.5 19.2 51.7 21.9 55.3c2.7 3.6 37.8 57.7 91.6 80.9 34.1 14.7 47.5 16 64.6 13.5 10.4-1.6 31.9-13 36.4-25.6 4.5-12.5 4.5-23.2 3.1-25.6-1.3-2.2-4.9-3.6-10.3-6.3z"/></svg>
+  </a>
+  <footer>
+    <div class="wrap footer-row"><p class="footer-name">Henrique · Criação e design de sites</p><p>Clareza, coerência visual e atenção aos detalhes.</p></div>
+  </footer>
+  <script>
+    (() => {
+      const bar = document.querySelector('.scroll-progress span');
+      if (!bar) return;
+      const update = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const value = max > 0 ? Math.min(100, Math.max(0, window.scrollY / max * 100)) : 0;
+        bar.style.width = `${value}%`;
+      };
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+    const contactForm = document.getElementById('whatsapp-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (!contactForm.reportValidity()) return;
+        const data = new FormData(contactForm);
+        const name = String(data.get('name') || '').trim();
+        const project = String(data.get('project') || '').trim();
+        const contact = String(data.get('contact') || '').trim();
+        const lines = [`Olá, Henrique. Meu nome é ${name}.`, `Gostaria de conversar sobre a seguinte proposta de site: ${project}`];
+        if (contact) lines.push(`Meu e-mail para contato: ${contact}`);
+        const target = `https://wa.me/5548988617482?text=${encodeURIComponent(lines.join('\n'))}`;
+        const opened = window.open(target, '_blank');
+        if (opened) opened.opener = null;
+        else window.location.href = target;
+      });
+    }
+  </script>
+</body>
+</html>
