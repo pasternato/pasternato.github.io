@@ -110,6 +110,15 @@
     .focus-number { display: inline-grid; width: 38px; height: 38px; place-items: center; border-radius: 12px; background: var(--pale); color: var(--blue); font-size: 12px; font-weight: 850; }
     .focus-card h3 { margin: 22px 0 8px; font-size: 19px; letter-spacing: -.03em; }
     .focus-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; align-items: stretch; }
+    .service-card { display: flex; flex-direction: column; min-height: 300px; padding: 27px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(155deg,#fff,#f7fafc); box-shadow: 0 9px 24px rgba(29,61,86,.055); }
+    .service-card h3 { margin: 0 0 15px; color: var(--ink); font-size: 19px; line-height: 1.35; letter-spacing: -.03em; }
+    .service-scope { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .service-price-label { margin: auto 0 2px; padding-top: 26px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .service-price { margin: 0 0 19px; color: var(--blue); font-size: clamp(22px,2.2vw,29px); line-height: 1.25; font-weight: 850; letter-spacing: -.045em; }
+    .service-cta { align-self: flex-start; color: var(--blue); font-size: 13px; font-weight: 800; text-underline-offset: 4px; }
+    @media (max-width: 900px) { .service-card { padding: 22px; } }
+    @media (max-width: 700px) { .services-grid { grid-template-columns: 1fr; } .service-card { min-height: 0; } .service-price-label { margin-top: 0; } }
     .process { position: relative; overflow: hidden; background: linear-gradient(130deg,#0b5d8c,#173c59 75%); color: var(--white); }
     .process::after { content: ""; position: absolute; width: 520px; height: 520px; right: -250px; bottom: -350px; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; box-shadow: 0 0 0 35px rgba(255,255,255,.03),0 0 0 70px rgba(255,255,255,.025); }
     .process .wrap { position: relative; z-index: 1; }
@@ -241,6 +250,7 @@
       <nav class="nav" aria-label="Navegação principal">
         <a href="#topo">Início</a>
         <a href="#o-que-faco">Abordagem</a>
+        <a href="#servicos">Serviços</a>
         <a href="#processo">Processo</a>
         <a href="#sobre">Sobre</a>
         <a class="nav-contact" href="#contato">Contato</a>
@@ -286,6 +296,39 @@
           <article class="focus-card"><span class="focus-number">01</span><h3>A primeira impressão começa antes da leitura.</h3><p>Cores, tipografia e composição formam o primeiro contato visual e devem estar alinhadas à proposta.</p></article>
           <article class="focus-card"><span class="focus-number">02</span><h3>Clareza orienta a leitura.</h3><p>Uma hierarquia bem definida e informações organizadas tornam a mensagem mais direta e fácil de acompanhar.</p></article>
           <article class="focus-card"><span class="focus-number">03</span><h3>Consistência reforça o conjunto.</h3><p>Espaçamento, alinhamento e equilíbrio visual ajudam a manter a apresentação coesa do início ao fim.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-label">Serviços e valores</span>
+          <h2 class="section-title" id="servicos-titulo">Serviços e valores</h2>
+          <p class="section-intro">Opções de criação de sites e valores.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Página única de apresentação</h3>
+            <p class="service-scope">Até 5 seções, responsiva, botão de contato e 2 rodadas de ajustes.</p>
+            <p class="service-price-label">Valor</p>
+            <p class="service-price">A partir de R$ 300</p>
+            <a class="service-cta" href="#contato">Conversar sobre este serviço</a>
+          </article>
+          <article class="service-card">
+            <h3>Site institucional compacto</h3>
+            <p class="service-scope">Até 4 páginas, responsivo, contato e SEO básico.</p>
+            <p class="service-price-label">Valor</p>
+            <p class="service-price">A partir de R$ 700</p>
+            <a class="service-cta" href="#contato">Conversar sobre este serviço</a>
+          </article>
+          <article class="service-card">
+            <h3>Loja virtual, agendamento ou integrações</h3>
+            <p class="service-scope">Loja virtual, agendamento ou integrações.</p>
+            <p class="service-price-label">Valor</p>
+            <p class="service-price">Sob consulta</p>
+            <a class="service-cta" href="#contato">Conversar sobre este serviço</a>
+          </article>
         </div>
       </div>
     </section>
